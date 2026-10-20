@@ -42,7 +42,7 @@ All versions and checksums are on the [Toast Wallet 3.0.0 release page](https://
 
 ---
 
-## 🛠️ Install
+## 🛠️ Install.
 
 <details open>
 <summary>🪟 Windows</summary>
